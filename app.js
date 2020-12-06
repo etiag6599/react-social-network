@@ -8,6 +8,18 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+const http = require('http');
+const port = process.env.PORT || 3000
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  
+  
+});
+
+server.listen(port,() => {
+  console.log(`Server running at port `+port);
+});
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
